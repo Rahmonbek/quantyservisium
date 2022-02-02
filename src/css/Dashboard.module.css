@@ -15,7 +15,7 @@
 .check ul{list-style: none;  width:100%; padding:0px;}
 
 .check li{ transition: 0.3s; padding-left:20px; height:40px; display: flex; align-items:center; width:100%;
-
+cursor: pointer;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;

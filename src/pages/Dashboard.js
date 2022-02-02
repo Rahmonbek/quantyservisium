@@ -236,20 +236,20 @@ echoDur=(dur)=>{
     <div className={style.check}>
         <p>Количество пересадок</p>
         <ul>
-        <li>
-            <input type="checkbox" id="chk1" name="chkdemo" onChange={()=>{this.EditCheck(0)}}  checked={this.state.check[0]}/><label for="chk1"></label> Все
+            <li  onClick={()=>{this.EditCheck(0)}}>
+            <input type="checkbox" id="chk1" name="chkdemo"  checked={this.state.check[0]}/><label for="chk1"></label> Все
             </li>
-            <li>
-            <input type="checkbox" id="chk2" name="chkdemo"  onChange={()=>{this.EditCheck(1)}}  checked={this.state.check[1]}/><label for="chk2"></label> Без пересадок
+            <li  onClick={()=>{this.EditCheck(1)}}>
+            <input type="checkbox" id="chk2" name="chkdemo"   checked={this.state.check[1]}/><label for="chk2"></label> Без пересадок
             </li>
-            <li>
-            <input type="checkbox" id="chk3" name="chkdemo"  onChange={()=>{this.EditCheck(2)}}  checked={this.state.check[2]}/><label for="chk3"></label> 1 пересадка
+            <li  onClick={()=>{this.EditCheck(2)}}>
+            <input type="checkbox" id="chk3" name="chkdemo"   checked={this.state.check[2]}/><label for="chk3"></label> 1 пересадка
             </li>
-            <li>
-            <input type="checkbox" id="chk4" name="chkdemo"  onChange={()=>{this.EditCheck(3)}}  checked={this.state.check[3]}/><label for="chk4"></label> 2 пересадки
+            <li  onClick={()=>{this.EditCheck(3)}}>
+            <input type="checkbox" id="chk4" name="chkdemo"   checked={this.state.check[3]}/><label for="chk4"></label> 2 пересадки
             </li>
-            <li>
-            <input type="checkbox" id="chk5" name="chkdemo"  onChange={()=>{this.EditCheck(4)}}  checked={this.state.check[4]}/><label for="chk5"></label> 3 пересадки
+            <li  onClick={()=>{this.EditCheck(4)}}>
+            <input type="checkbox" id="chk5" name="chkdemo"   checked={this.state.check[4]}/><label for="chk5"></label> 3 пересадки
             </li>
 
         </ul>
