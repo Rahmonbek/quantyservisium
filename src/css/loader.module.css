@@ -1,0 +1,40 @@
+.loader{width:100%; background-color: #F3F7FA; height:100vh; display: flex; align-items: center; justify-content: center;}
+.plane{width:400px; position: relative; height:400px; display:flex; align-items:center}
+.plane img{width:100px; height:100px !important;}
+.logo{width:200px; z-index: 0; position:absolute; top:150px; left:150px; height:125px; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;}
+.planeright{transform: rotate(180deg); z-index: 23; animation-name:plane; animation-duration:5s; animation-iteration-count: infinite;}
+.planeleft{transform: rotate(0deg); z-index: 23; animation-name:planeleft; animation-duration:5s; animation-iteration-count: infinite;}
+
+@keyframes planeleft{
+    0%{position: absolute; right:250px; top:150px; transform: rotate(0deg);}
+    12.5%{position: absolute; right:225px; top:100px; transform: rotate(45deg);}
+    25%{position: absolute; right:150px; top:50px; transform: rotate(90deg);}
+    37.5%{position: absolute; right:75px; top:100px; transform: rotate(135deg);}
+
+    50%{position: absolute; right:50px; top:150px; transform: rotate(180deg);}
+    62.5%{position: absolute; right:75px; top:200px; transform: rotate(225deg);}
+
+    75%{position: absolute; right:150px; top:250px; transform: rotate(270deg);}
+    87.5%{position: absolute; right:225px; top:200px; transform: rotate(315deg);}
+
+    100%{position: absolute; right:250px; top:150px; transform: rotate(360deg);}
+    
+   
+}
+@keyframes plane{
+    0%{position: absolute; right:50px; top:150px; transform: rotate(180deg);}
+    12.5%{position: absolute; right:75px; top:200px; transform: rotate(225deg);}
+    25%{position: absolute; right:150px; top:250px; transform: rotate(270deg);}
+    37.5%{position: absolute; right:225px; top:200px; transform: rotate(315deg);}
+
+    50%{position: absolute; right:250px; top:150px; transform: rotate(360deg);}
+    62.5%{position: absolute; right:225px; top:100px; transform: rotate(405deg);}
+    75%{position: absolute; right:150px; top:50px; transform: rotate(450deg);}
+    87.5%{position: absolute; right:75px; top:100px; transform: rotate(495deg);}
+    100%{position: absolute; right:50px; top:150px; transform: rotate(540deg);}
+
+
+    
+
+  
+}
