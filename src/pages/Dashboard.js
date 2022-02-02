@@ -73,24 +73,40 @@ echoDur=(dur)=>{
         this.setState({
             check:a,
         loader:true,
+        number:5,
         })
-        if((this.state.check[1] && this.state.check[2] && this.state.check[3] && this.state.check[4]) || (!this.state.check[1] && !this.state.check[2] && !this.state.check[3] && !this.state.check[4]) ){
+        if(this.state.check[1] && this.state.check[2] && this.state.check[3] && this.state.check[4]){
             a=this.state.check
             a[0]=true
+            a[1]=false
+                a[2]=false
+                a[3]=false
+                a[4]=false
             this.setState({
                 check:a,
            
             })
+
                 
         }else{
-            if(this.state.check[1] || this.state.check[2] || this.state.check[3] || this.state.check[4]){
+            if(!this.state.check[1] && !this.state.check[2] && !this.state.check[3] && !this.state.check[4]){
+                a=this.state.check
+                a[0]=true
+                
+
+                this.setState({
+                    check:a,
+               
+                })
+            }else{   if(this.state.check[1] || this.state.check[2] || this.state.check[3] || this.state.check[4]){
                 a=this.state.check
                 a[0]=false
                 this.setState({
                     check:a,
                
                 })
-            }
+            }}
+         
         }
         var ti=this.state.tick
         var g=[]
@@ -190,6 +206,7 @@ echoDur=(dur)=>{
      this.setState({
          btn:a,
          loader:true,
+         number:5,
      })
      var g=this.state.tickets
      if(this.state.btn[0]){
@@ -237,19 +254,19 @@ echoDur=(dur)=>{
         <p>Количество пересадок</p>
         <ul>
             <li  onClick={()=>{this.EditCheck(0)}}>
-            <input type="checkbox" id="chk1" name="chkdemo"  checked={this.state.check[0]}/><label for="chk1"></label> Все
+            <input type="checkbox" id="chk1" name="chkdemo"  onChange={()=>{this.EditCheck(0)}} checked={this.state.check[0]}/><label for="chk1"></label> Все
             </li>
             <li  onClick={()=>{this.EditCheck(1)}}>
-            <input type="checkbox" id="chk2" name="chkdemo"   checked={this.state.check[1]}/><label for="chk2"></label> Без пересадок
+            <input type="checkbox" id="chk2" name="chkdemo"  onChange={()=>{this.EditCheck(1)}}  checked={this.state.check[1]}/><label for="chk2"></label> Без пересадок
             </li>
             <li  onClick={()=>{this.EditCheck(2)}}>
-            <input type="checkbox" id="chk3" name="chkdemo"   checked={this.state.check[2]}/><label for="chk3"></label> 1 пересадка
+            <input type="checkbox" id="chk3" name="chkdemo"  onChange={()=>{this.EditCheck(2)}}  checked={this.state.check[2]}/><label for="chk3"></label> 1 пересадка
             </li>
             <li  onClick={()=>{this.EditCheck(3)}}>
-            <input type="checkbox" id="chk4" name="chkdemo"   checked={this.state.check[3]}/><label for="chk4"></label> 2 пересадки
+            <input type="checkbox" id="chk4" name="chkdemo"  onChange={()=>{this.EditCheck(3)}}  checked={this.state.check[3]}/><label for="chk4"></label> 2 пересадки
             </li>
             <li  onClick={()=>{this.EditCheck(4)}}>
-            <input type="checkbox" id="chk5" name="chkdemo"   checked={this.state.check[4]}/><label for="chk5"></label> 3 пересадки
+            <input type="checkbox" id="chk5" name="chkdemo"  onChange={()=>{this.EditCheck(4)}}  checked={this.state.check[4]}/><label for="chk5"></label> 3 пересадки
             </li>
 
         </ul>
