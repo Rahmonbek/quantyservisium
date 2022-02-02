@@ -23,10 +23,12 @@ getTickets=()=>{
       
 
         this.setState({
-            tickets:res1.data.tickets,loader:false,
+            tickets:res1.data.tickets,
+            loader:false,
             tick:res1.data.tickets
         })
         this.EditCheck()
+        
     })
     })
 }
@@ -107,6 +109,18 @@ echoDur=(dur)=>{
                 })
             }}
          
+        }
+        if(id===0){
+            a=this.state.check
+            a[0]=true
+            a[1]=false
+                a[2]=false
+                a[3]=false
+                a[4]=false
+            this.setState({
+                check:a,
+           
+            })
         }
         var ti=this.state.tick
         var g=[]
