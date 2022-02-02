@@ -1,1 +1,35 @@
-body{width:100%; overflow-x: hidden; background-color:#F3F7FA}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.bo{width:100%; overflow-x: hidden; background-color:#F3F7FA}
+*{font-family: 'Open Sans', sans-serif;}
+
+
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  width:20px; 
+  height:20px;
+  display: inline-block;
+  position: relative;
+  margin-right:10px;
+  background-color: white;
+  border: 1px solid #9ABBCE;
+  box-sizing: border-box;
+  border-radius: 2px;
+  
+}
+
+input[type=checkbox]:checked + label {
+  background-color: white !important;
+  color: #A4B7C6 !important;
+}
+
+input[type=checkbox]:checked + label:after {
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: #2196F3; 
+  content: '\2714'; 
+  font-size: 15px;
+} 

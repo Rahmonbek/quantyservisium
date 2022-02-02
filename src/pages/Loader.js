@@ -8,10 +8,10 @@ export default class Loader extends Component {
             <div>
                  <div className={style.loader}>
                    <div className={style.plane}>
-                   <img className={style.planeleft} src={plane}/>
+                   <img className={style.planeleft} src={plane} alt="..."/>
 
-                       <img className={style.logo} src={logo}/>
-                       <img className={style.planeright} src={plane}/>
+                       <img className={style.logo} src={logo}  alt="..."/>
+                       <img className={style.planeright} src={plane}  alt="..."/>
                    </div>
                 </div>
             </div>

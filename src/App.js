@@ -5,7 +5,7 @@ import Dashboard from './pages/Dashboard'
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="bo">
        
 <Dashboard/>
                </div>
