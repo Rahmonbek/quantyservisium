@@ -3,16 +3,22 @@ import style from '../css/Dashboard.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css'
 import Loader from './Loader.js'
+import Card from './Card.js'
 import logo from '../img/logo.png'
 import { Col, Container, Row } from 'react-bootstrap';
-import Checkbox from 'antd/lib/checkbox/Checkbox';
-import { Button, Radio } from 'antd';
+import { Button} from 'antd';
 
 export default class Dashboard extends Component {
     state={
         loader:true,
         check:[false, true, true, true, false],
         btn:[true, false, false],
+        number:[0, 0, 0, 0, 0]
+    }
+    addCard=()=>{
+        this.setState({
+            number:this.state.number.concat(this.state.number)
+        })
     }
     EditCheck=(id)=>{
         var a=this.state.check
@@ -80,13 +86,20 @@ export default class Dashboard extends Component {
     </div>
 </Col>
     <Col lg={9} style={{padding:'20px'}}>
-   <div className={style.butGroup}>
-   <Button onClick={()=>{this.EditBtn(0)}} type={this.state.btn[0]?"primary":''} className={style.but}>Самый дешевый
-
-</Button>
-   <Button onClick={()=>{this.EditBtn(1)}} type={this.state.btn[1]?"primary":''} className={style.but}>Самый быстрый</Button>
-   <Button onClick={()=>{this.EditBtn(2)}} type={this.state.btn[2]?"primary":''} className={style.but}>Оптимальный</Button>
-   </div>
+    <div className={style.butGroup}>
+                
+                <Button onClick={()=>{this.EditBtn(0)}} type={this.state.btn[0]?"primary":''} className={style.but}>Самый дешевый
+             
+             </Button>
+                <Button onClick={()=>{this.EditBtn(1)}} type={this.state.btn[1]?"primary":''} className={style.but}>Самый быстрый</Button>
+                <Button onClick={()=>{this.EditBtn(2)}} type={this.state.btn[2]?"primary":''} className={style.but}>Оптимальный</Button>
+                </div>
+                {this.state.number.map(item=>{
+                    return(<Card/>)
+                })}
+               
+               <Button type="primary" onClick={this.addCard} className={style.butBig}>Показать еще 5 билетов!</Button>
+    
     </Col>
     
 </Row>
