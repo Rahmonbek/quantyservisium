@@ -45,7 +45,7 @@ export default class Dashboard extends Component {
     componentDidMount(){
         setTimeout(()=>{
             this.setState({loader:false})
-        },0)
+        },7000)
     }
     render() {
         return (
